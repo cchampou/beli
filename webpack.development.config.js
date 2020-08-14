@@ -9,13 +9,22 @@ module.exports = {
   })],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    compress: true,
+    host: 'localhost',
     port: 9000,
+    overlay: true,
+    hot: true,
+    quiet: true,
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader',
+      },
+      {
+        test: /\.(jpg|png)$/, exclude: /node_modules/, loader: 'file-loader',
       },
     ],
   },

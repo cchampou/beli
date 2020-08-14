@@ -1,5 +1,11 @@
 import React from 'react';
 import reactDom from 'react-dom';
+import Home from './pages/home';
 
-const Hello = () => 'Hello world';
-reactDom.render(<Hello />, document.getElementById('root'));
+reactDom.render(<Home />, document.getElementById('root'));
+
+if (module.hot) {
+  module.hot.accept('./index', () => {
+    console.log('Reloading');
+  });
+}

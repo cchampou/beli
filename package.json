@@ -8,6 +8,10 @@
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-react": "^7.10.4",
+    "@storybook/addon-actions": "^6.0.7",
+    "@storybook/addon-essentials": "^6.0.7",
+    "@storybook/addon-links": "^6.0.7",
+    "@storybook/react": "^6.0.7",
     "babel-loader": "^8.1.0",
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -16,6 +20,8 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.0.8",
     "html-webpack-plugin": "^4.3.0",
+    "prop-types": "^15.7.2",
+    "react-is": "^16.13.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
@@ -28,6 +34,8 @@
   },
   "scripts": {
     "lint": "eslint --ext jsx src",
-    "dev": "webpack-dev-server --config webpack.development.config.js"
+    "dev": "webpack-dev-server --config webpack.development.config.js --open",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }
