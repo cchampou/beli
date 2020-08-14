@@ -1,0 +1,8 @@
+{
+  "name": "beli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "cchampou <clement@champouillon.com>",
+  "license": "MIT",
+  "private": true
+}
