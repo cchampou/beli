@@ -1,3 +1,5 @@
+import React from 'react';
 import reactDom from 'react-dom';
 
-reactDom.render(() => 'Hello world', document.getElementById('root'));
+const Hello = () => 'Hello world';
+reactDom.render(<Hello />, document.getElementById('root'));
