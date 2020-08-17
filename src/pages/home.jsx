@@ -1,10 +1,8 @@
 import React from 'react';
 import { Heading1, Heading2, Paragraph } from '../components/typography';
-import Header from '../components/header';
 
 export default () => (
   <>
-    <Header />
     <Heading1>Love Coach | Belinda Sans Tabous</Heading1>
     <Heading2>
       Comment être heureux en amour ? Avec la méthode Piano !

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 const common = css`
-  color: #333;
+  color: ${({ theme }) => theme.colors.secondary};
   font-family: 'Playfair Display', serif;
 `;
 
@@ -23,6 +23,6 @@ export const Heading3 = styled.h3`
 
 export const Paragraph = styled.p`
   font-size: 1rem;
-  color: gray;
+  color: ${({ theme }) => theme.colors.tertiary};
   font-family: 'Open Sans', sans-serif;
 `;

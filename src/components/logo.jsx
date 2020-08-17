@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types';
 import LogoFile from '../assets/logo.jpg';
 
 const Image = styled.img`
-  height: ${({ size }) => size};
+  height: ${({ height }) => height};
   width: ${({ width }) => width};
 `;
 
