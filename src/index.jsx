@@ -14,6 +14,10 @@ export const GlobalStyles = css`
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     margin: 0;
+    line-height: 2rem;
+  }
+  strong {
+    font-weight: 800;  
   }
   a {
     text-decoration: none;

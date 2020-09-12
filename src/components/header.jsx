@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { Link } from '@reach/router';
 import Logo from './logo';
+
+const Padder = styled('div')`
+  height: 10rem;
+`;
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  ${({ scrolled }) => scrolled && 'box-shadow: 0 0 7px silver'};
+  transition: box-shadow 0.25s ease-in-out;
 `;
 
 const List = styled.ul`
@@ -17,21 +27,38 @@ const List = styled.ul`
 const Items = styled.li`
   font-size: 1.25rem;
   color: ${({ theme }) => theme.colors.tertiary};
-  margin: 2rem;
+  margin: auto 2rem;
 `;
 
-export default () => (
-  <Container>
-    <List>
-      <Items><Link to="">Accueil</Link></Items>
-      <Items><Link to="about">Qui suis-je</Link></Items>
-      <Items><Link to="about">Boutique</Link></Items>
-    </List>
-    <Logo height="10rem" />
-    <List>
-      <Items>Blog</Items>
-      <Items>Contact</Items>
-      <Items>Youtube</Items>
-    </List>
-  </Container>
-);
+export default () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  const scrollHandler = useCallback(() => {
+    setScrolled(window.scrollY !== 0);
+  }, []);
+  useEffect(() => {
+    window.addEventListener('scroll', scrollHandler);
+    return () => {
+      window.removeEventListener('scroll', scrollHandler);
+    };
+  });
+
+  return (
+    <>
+      <Padder />
+      <Container scrolled={scrolled}>
+        <List>
+          <Items><Link to="">Accueil</Link></Items>
+          <Items><Link to="about">Qui suis-je</Link></Items>
+          <Items><Link to="about">Boutique</Link></Items>
+        </List>
+        <Logo height="10rem" />
+        <List>
+          <Items>Blog</Items>
+          <Items>Contact</Items>
+          <Items>Youtube</Items>
+        </List>
+      </Container>
+    </>
+  );
+};
