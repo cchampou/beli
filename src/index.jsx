@@ -27,7 +27,7 @@ const App = () => (
     <Header />
     <Router>
       <Home path="/" />
-
+      <About path="about" />
     </Router>
     <Footer />
   </ThemeProvider>
