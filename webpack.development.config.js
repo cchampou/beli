@@ -25,6 +25,7 @@ module.exports = {
     overlay: true,
     hot: true,
     quiet: true,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
