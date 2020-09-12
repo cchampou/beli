@@ -25,9 +25,11 @@ export default () => (
     <List>
       <Items><Link to="">Accueil</Link></Items>
       <Items><Link to="about">Qui suis-je</Link></Items>
+      <Items><Link to="about">Boutique</Link></Items>
     </List>
     <Logo height="10rem" />
     <List>
+      <Items>Blog</Items>
       <Items>Contact</Items>
       <Items>Youtube</Items>
     </List>
