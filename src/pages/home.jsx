@@ -5,7 +5,7 @@ import beli from '../assets/Beli.jpg';
 import piano from '../assets/piano.jpg';
 import Quote from '../components/quote';
 
-const Wrapper = styled('div')`
+export const Wrapper = styled('div')`
   width: 80%;
   margin: auto;
 `;
