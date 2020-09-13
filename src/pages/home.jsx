@@ -2,6 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Heading1, Heading2, Paragraph } from '../components/typography';
 import beli from '../assets/Beli.jpg';
+import piano from '../assets/piano.jpg';
+import Quote from '../components/quote';
 
 const Wrapper = styled('div')`
   width: 80%;
@@ -18,12 +20,24 @@ const Items = styled('div')`
 `;
 
 const Title = styled(Heading1)`
-  margin: 3rem 0 0;
-  text-align: center;
+  margin: 0 0;
+  font-style: normal;
+  font-size: 3rem;
+`;
+
+const UnderTitle = styled(Heading1)`
+  color: lightgray;
+  font-size: 5rem;
+  margin: 0.5rem;
+  z-index: -1;
+`;
+
+const Img = styled('img')`
+  box-shadow: 0 0 10px lightgray;
 `;
 
 const FirstWrapper = styled('div')`
-  height: calc(100vh - 24rem);
+  height: calc(100vh - 13rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,15 +46,17 @@ const FirstWrapper = styled('div')`
 
 export default () => (
   <Wrapper>
-    <Title>Love Coach | Belinda Sans Tabous</Title>
     <Columns>
       <Items>
         <FirstWrapper>
-          <img src={beli} alt="Belinda" style={{ margin: 'auto' }} />
-          <Paragraph>
-            « La vie est un sommeil, l’amour en est le rêve, et vous aurez vécu si vous avez aimé » Alfred de Musset
-          </Paragraph>
+          <Title>Belinda</Title>
+          <UnderTitle>Sans Tabous</UnderTitle>
+          <Img src={beli} alt="Belinda" style={{ margin: 'auto' }} />
+          <Quote author="Alfred de Musset">
+            La vie est un sommeil, l’amour en est le rêve, et vous aurez vécu si vous avez aimé
+          </Quote>
         </FirstWrapper>
+        <img src={piano} alt="Piano" width="100%" />
       </Items>
       <Items>
         <FirstWrapper>
