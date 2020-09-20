@@ -11,9 +11,10 @@ module.exports = {
     assert: {
       preset: 'lighthouse:recommended',
       assertions: {
-        'content-width': ['warn', { minScore: 0.9 }],
-        'uses-optimized-images': ['warn', { maxLength: 0 }],
-        'uses-responsive-images': ['warn', { maxLength: 0 }],
+        'content-width': 'warn',
+        'uses-optimized-images': 'warn',
+        'uses-responsive-images': 'warn',
+        'unused-javascript': 'warn',
       },
     },
     upload: {
