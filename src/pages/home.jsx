@@ -47,12 +47,12 @@ export default () => {
           <FirstWrapper>
             <Title>Belinda</Title>
             <UnderTitle>Sans Tabous</UnderTitle>
-            <Img src={beli} alt="Belinda" style={{ margin: 'auto' }} />
+            <Img src={beli} alt="Belinda" style={{ margin: 'auto' }} width="100%" height="auto" />
             <Quote author="Alfred de Musset">
               {t('home.quote')}
             </Quote>
           </FirstWrapper>
-          <img src={piano} alt="Piano" width="100%" />
+          <img src={piano} alt="Piano" width="100%" height="auto" />
         </Items>
         <Items>
           <FirstWrapper>
