@@ -10,6 +10,9 @@ module.exports = {
     },
     assert: {
       preset: 'lighthouse:recommended',
+      assertions: {
+        'content-width': ['warn', { minScore: 0.9 }],
+      },
     },
     upload: {
       target: 'temporary-public-storage',
