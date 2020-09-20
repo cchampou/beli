@@ -6,5 +6,5 @@ steps:
   - name: eslint check
     image: node:14-alpine
     commands:
-      - yarn --network-timeout 3600000
+      - yarn
       - yarn lint
