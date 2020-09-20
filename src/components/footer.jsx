@@ -11,7 +11,8 @@ const Wrapper = styled.div`
 
 const Footer = () => (
   <Wrapper>
-    Belinda SANS TABOUS - Tous droits réservés I Copyright © 2020 I Lire les Conditions Générales de Vente
+    Belinda SANS TABOUS - Tous droits réservés I Copyright © 2020
+    I Lire les Conditions Générales de Vente
   </Wrapper>
 );
 
