@@ -8,7 +8,7 @@ import SocialIcon from './socialIcon';
 const Wrapper = styled('div')`
   position: fixed;
   bottom: 100px;
-  right: 100px;
+  right: 50px;
   display: flex;
   flex-direction: column;
 `;

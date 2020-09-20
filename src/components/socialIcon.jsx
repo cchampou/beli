@@ -8,10 +8,16 @@ const WithMarginIcon = styled(FontAwesomeIcon)`
   color: ${({ color }) => color};
 `;
 
+const Link = styled('a')`
+  color: transparent;
+  text-align: left;
+`;
+
 const SocialIcon = ({ icon, link, color }) => (
-  <a href={link} target="_blank" rel="noreferrer">
+  <Link href={link} target="_blank" rel="noreferrer">
     <WithMarginIcon icon={icon} size="1x" color={color} />
-  </a>
+    {icon.iconName}
+  </Link>
 );
 
 SocialIcon.propTypes = {
