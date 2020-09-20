@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import { color } from '../utils/styles';
 
 const Wrapper = styled.div`
-  background-color: ${color('tertiary')};
-  color: ${color('white')};
+  background-color: ${color('light')};
+  color: ${color('primary')};
   margin: 0;
   padding: 1rem;
   text-align: center;

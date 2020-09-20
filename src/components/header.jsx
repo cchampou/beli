@@ -26,7 +26,7 @@ const List = styled.ul`
 
 const Items = styled.li`
   font-size: 1.25rem;
-  color: ${({ theme }) => theme.colors.tertiary};
+  color: ${({ theme }) => theme.colors.primary};
   margin: auto 2rem;
 `;
 
