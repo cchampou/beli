@@ -4,7 +4,9 @@ module.exports = {
       staticDistDir: './dist',
       url: ['/'],
       isSinglePageApplication: true,
-      chromeFlags: '--no-sandbox',
+      settings: {
+        chromeFlags: '--no-sandbox',
+      },
     },
     assert: {
       preset: 'lighthouse:recommended',
