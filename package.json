@@ -43,7 +43,7 @@
     "react-i18next": "^11.7.2"
   },
   "scripts": {
-    "lint": "eslint --ext jsx src",
+    "lint": "eslint --ext jsx --ext js src",
     "dev": "webpack-dev-server --config webpack.development.config.js --open",
     "build": "webpack --config webpack.config.js",
     "serve": "serve -s dist",
