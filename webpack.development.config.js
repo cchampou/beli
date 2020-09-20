@@ -2,8 +2,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const commonConfig = require('./webpack.common.config');
 
 module.exports = {
+  ...commonConfig,
   mode: 'development',
   entry: path.resolve('src/index.jsx'),
   plugins: [
@@ -26,18 +28,5 @@ module.exports = {
     hot: true,
     quiet: true,
     historyApiFallback: true,
-  },
-  resolve: {
-    extensions: ['.js', '.jsx', '.json'],
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader',
-      },
-      {
-        test: /\.(jpg|png)$/, exclude: /node_modules/, loader: 'file-loader',
-      },
-    ],
   },
 };
