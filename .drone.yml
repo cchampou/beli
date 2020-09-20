@@ -3,20 +3,20 @@ type: docker
 name: default
 
 steps:
-  - name: eslint check
-    image: node:14-alpine
-    commands:
-      - yarn
-      - yarn lint
-    depends_on:
-      - clone
-  - name: build
-    image: node:14-alpine
-    commands:
-      - yarn
-      - yarn build
-    depends_on:
-      - clone
+#  - name: eslint check
+#    image: node:14-alpine
+#    commands:
+#      - yarn
+#      - yarn lint
+#    depends_on:
+#      - clone
+#  - name: build
+#    image: node:14-alpine
+#    commands:
+#      - yarn
+#      - yarn build
+#    depends_on:
+#      - clone
   - name: benchmark
     image: markhobson/node-chrome:latest
     commands:
