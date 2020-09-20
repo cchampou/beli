@@ -3,20 +3,16 @@ type: docker
 name: default
 
 steps:
-#  - name: eslint check
-#    image: node:14-alpine
-#    commands:
-#      - yarn
-#      - yarn lint
-#    depends_on:
-#      - clone
-#  - name: build
-#    image: node:14-alpine
-#    commands:
-#      - yarn
-#      - yarn build
-#    depends_on:
-#      - clone
+  - name: eslint check
+    image: node:14-alpine
+    commands:
+      - yarn
+      - yarn lint
+  - name: build
+    image: node:14-alpine
+    commands:
+      - yarn
+      - yarn build
   - name: benchmark
     image: node:14-alpine
     environment:
@@ -28,5 +24,3 @@ steps:
       - yarn
       - yarn build
       - yarn lhci
-    depends_on:
-      - clone
