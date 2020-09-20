@@ -1,12 +1,22 @@
 import { useTranslation } from 'react-i18next';
 import React from 'react';
 import styled from '@emotion/styled';
-import { Heading2, Paragraph } from '../components/typography';
+import { Heading2, Heading3, Paragraph } from '../components/typography';
 import { Wrapper } from './home';
-import { Columns, Items } from '../utils/flex';
+import { Columns } from '../utils/flex';
+import bluePastel from '../assets/pastel-blue.jpg';
+import pinkPastel from '../assets/pastel-pink.jpg';
 
 const CenteredTextWrapper = styled(Wrapper)`
   text-align: center;
+`;
+
+const Tile = styled('a')`
+  flex: 1;
+  background-image: url(${({ women }) => (women ? pinkPastel : bluePastel)});
+  background-size: cover;
+  margin: 3rem;
+  padding: 5rem;
 `;
 
 const Youtube = () => {
@@ -14,18 +24,18 @@ const Youtube = () => {
 
   return (
     <CenteredTextWrapper>
-      <Paragraph>
+      <Heading3>
         {t('youtube.intro')}
-      </Paragraph>
+      </Heading3>
       <Columns>
-        <Items>
+        <Tile women href="https://www.youtube.com/channel/BelindaSANSTABOUS" target="_blank" rel="noreferrer">
           <Heading2>{t('youtube.women')}</Heading2>
           <Paragraph>{t('youtube.womenDetails')}</Paragraph>
-        </Items>
-        <Items>
+        </Tile>
+        <Tile href="https://www.youtube.com/channel/UCfLHC1KJrnCeh1zb5hSHJEQ" target="_blank" rel="noreferrer">
           <Heading2>{t('youtube.men')}</Heading2>
           <Paragraph>{t('youtube.menDetails')}</Paragraph>
-        </Items>
+        </Tile>
       </Columns>
     </CenteredTextWrapper>
   );
