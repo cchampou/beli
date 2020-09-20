@@ -19,6 +19,9 @@ steps:
 #      - clone
   - name: benchmark
     image: node:14-alpine
+    environment:
+      LHCI_GITHUB_APP_TOKEN:
+        from_secret: LHCI_GITHUB_APP_TOKEN
     commands:
       - apk add chromium
       - yarn
