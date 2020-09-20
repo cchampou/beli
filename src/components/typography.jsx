@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import importedTheme from '../../config/theme.json';
 
 const common = css`
-  color: ${importedTheme.colors.secondary};
+  color: ${importedTheme.colors.primary};
   font-family: 'Playfair Display', serif;
 `;
 

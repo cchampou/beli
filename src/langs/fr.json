@@ -25,5 +25,10 @@
     "menDetails": "Pour les hommes",
     "women": "Belinda sans tabous",
     "womenDetails": "La chaine des femmes"
+  },
+  "contact": {
+    "contactMe": "Contactez-moi",
+    "contactInfo": "Mes coordonnées",
+    "email": "contact@belinda-sanstabous.com"
   }
 }

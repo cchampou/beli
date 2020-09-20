@@ -13,8 +13,10 @@ const CenteredTextWrapper = styled(Wrapper)`
 
 const Tile = styled('a')`
   flex: 1;
-  background-image: url(${({ women }) => (women ? pinkPastel : bluePastel)});
   background-size: cover;
+  background-image: url(${({ women }) => (women ? pinkPastel : bluePastel)});
+  background-image: radial-gradient(rgba(255,255,255,0) 50%, #ffffff),
+    url(${({ women }) => (women ? pinkPastel : bluePastel)});
   margin: 3rem;
   padding: 5rem;
 `;

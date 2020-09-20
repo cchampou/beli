@@ -3,6 +3,7 @@ import React from 'react';
 import { Wrapper } from './home';
 import { Heading1 } from '../components/typography';
 import { Columns, Items } from '../utils/flex';
+import { Button, Input, TextArea } from '../components/forms';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -11,15 +12,15 @@ const Contact = () => {
     <Wrapper>
       <Columns>
         <Items>
-          <Heading1>Contactez-moi</Heading1>
-          <input type="text" name="name" placeholder="Nom et prénom" />
-          <input type="text" name="name" placeholder="Adresse email" />
-          <textarea placeholder="Message" />
-          <button type="submit">Envoyer</button>
+          <Heading1>{t('contact.contactMe')}</Heading1>
+          <Input type="text" name="name" placeholder="Nom et prénom" />
+          <Input type="text" name="name" placeholder="Adresse email" />
+          <TextArea placeholder="Message" rows="5" />
+          <Button type="submit">Envoyer</Button>
         </Items>
         <Items>
-          <Heading1>Mes coordonnées</Heading1>
-          <a href="mailto:contact@belinda-sanstabous.com">contact@belinda-sanstabous.com</a>
+          <Heading1>{t('contact.contactInfo')}</Heading1>
+          <a href={`mailto:${t('contact.email')}`}>{t('contact.email')}</a>
         </Items>
       </Columns>
     </Wrapper>
