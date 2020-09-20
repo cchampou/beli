@@ -10,11 +10,13 @@ const common = css`
 export const Heading1 = styled.h1`
   ${common};
   font-size: 2rem;
+  font-weight: 100;
 `;
 
 export const Heading2 = styled.h2`
   ${common};
   font-size: 1.75rem;
+  font-weight: 100;
 `;
 
 export const Heading3 = styled.h3`
