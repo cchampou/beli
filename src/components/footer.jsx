@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   color: ${color('white')};
   margin: 0;
   padding: 1rem;
+  text-align: center;
 `;
 
 const Footer = () => (
