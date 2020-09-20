@@ -1,8 +1,10 @@
 import React from 'react';
 import reactDom from 'react-dom';
+import './utils/i18n';
 import { ThemeProvider } from 'emotion-theming';
 import { Global, css } from '@emotion/core';
 import { Router } from '@reach/router';
+
 import Home from './pages/home';
 import About from './pages/about';
 import theme from '../config/theme.json';
