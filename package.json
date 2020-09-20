@@ -41,5 +41,8 @@
     "dev": "webpack-dev-server --config webpack.development.config.js --open",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "resolutions": {
+    "prismjs": "1.21.0"
   }
 }
