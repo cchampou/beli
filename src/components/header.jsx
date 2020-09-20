@@ -26,7 +26,7 @@ const List = styled.ul`
 
 const Items = styled.li`
   font-size: 1.25rem;
-  color: ${({ theme }) => theme.colors.tertiary};
+  color: ${({ theme }) => theme.colors.primary};
   margin: auto 2rem;
 `;
 
@@ -52,7 +52,7 @@ export default () => {
           <Items><Link to="about">Qui suis-je</Link></Items>
           <Items><Link to="shop">Boutique</Link></Items>
         </List>
-        <Logo height="10rem" />
+        <Logo height="150" width="213" />
         <List>
           <Items><Link to="blog">Blog</Link></Items>
           <Items><Link to="contact">Contact</Link></Items>

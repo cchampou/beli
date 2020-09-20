@@ -8,17 +8,6 @@ module.exports = {
   ...commonConfig,
   mode: 'development',
   entry: path.resolve('src/index.jsx'),
-  plugins: [
-    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-    new HtmlWebpackPlugin({
-      template: 'public/index.html',
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'public/favicon.ico' },
-      ],
-    }),
-  ],
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
