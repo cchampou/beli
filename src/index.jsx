@@ -8,6 +8,7 @@ import { Router } from '@reach/router';
 import theme from '../config/theme.json';
 import Header from './components/header';
 import Footer from './components/footer';
+import SocialBar from './components/socialBar';
 
 const Home = React.lazy(() => import('./pages/home'));
 const About = React.lazy(() => import('./pages/about'));
@@ -43,6 +44,7 @@ const App = () => (
         <Contact path="contact" />
       </Router>
     </Suspense>
+    <SocialBar />
     <Footer />
   </ThemeProvider>
 );
@@ -53,7 +55,7 @@ if (module.hot) {
   module.hot.accept('./index', () => null);
 }
 
-if ('serviceWorker' in navigator) {
+if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js').then((registration) => {
       // eslint-disable-next-line no-console
