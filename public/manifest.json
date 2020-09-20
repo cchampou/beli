@@ -1,0 +1,23 @@
+{
+  "name": "Belinda sans tabous",
+  "short_name": "Belinda",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [{
+    "src": "40.png",
+    "sizes": "40x40",
+    "type": "image/png"
+  }, {
+    "src": "60.png",
+    "sizes": "60x60",
+    "type": "image/png"
+  }, {
+    "src": "120.png",
+    "sizes": "120x120",
+    "type": "image/png"
+  }, {
+    "src": "180.png",
+    "sizes": "180x180",
+    "type": "image/png"
+  }]
+}
