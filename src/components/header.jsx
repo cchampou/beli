@@ -52,7 +52,7 @@ export default () => {
           <Items><Link to="about">Qui suis-je</Link></Items>
           <Items><Link to="shop">Boutique</Link></Items>
         </List>
-        <Logo height="150" width="200" />
+        <Logo height="150" width="213" />
         <List>
           <Items><Link to="blog">Blog</Link></Items>
           <Items><Link to="contact">Contact</Link></Items>
