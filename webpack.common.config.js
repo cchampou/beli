@@ -1,3 +1,7 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -12,4 +16,16 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'public/favicon.ico' },
+        { from: 'public/robots.txt' },
+      ],
+    }),
+  ],
 };

@@ -6,7 +6,4 @@ module.exports = {
   ...commonConfig,
   mode: 'production',
   entry: path.resolve('src/index.jsx'),
-  plugins: [new HtmlWebpackPlugin({
-    template: 'public/index.html',
-  })],
 };
