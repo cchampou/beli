@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import theme from '../../config/theme.json';
+import importedTheme from '../../config/theme.json';
 
 const common = css`
-  color: ${theme.colors.secondary};
+  color: ${importedTheme.colors.secondary};
   font-family: 'Playfair Display', serif;
 `;
 

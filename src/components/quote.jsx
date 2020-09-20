@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Paragraph } from './typography';
@@ -30,5 +31,13 @@ const Quote = ({ children }) => (
     {children}
   </Content>
 );
+
+Quote.defaultProps = {
+  children: null,
+};
+
+Quote.propTypes = {
+  children: PropTypes.node,
+};
 
 export default Quote;

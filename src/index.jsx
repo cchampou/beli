@@ -9,6 +9,7 @@ import theme from '../config/theme.json';
 import Header from './components/header';
 import Footer from './components/footer';
 
+// eslint-disable-next-line import/prefer-default-export
 export const GlobalStyles = css`
   body {
     font-family: 'Open Sans', sans-serif;
@@ -40,7 +41,5 @@ const App = () => (
 reactDom.render(<App />, document.getElementById('root'));
 
 if (module.hot) {
-  module.hot.accept('./index', () => {
-    console.log('Reloading');
-  });
+  module.hot.accept('./index', () => null);
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import * as PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import LogoFile from '../assets/logo.jpg';
 
 const Image = styled.img`

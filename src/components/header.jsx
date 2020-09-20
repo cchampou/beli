@@ -48,7 +48,7 @@ export default () => {
       <Padder />
       <Container scrolled={scrolled}>
         <List>
-          <Items><Link to="">Accueil</Link></Items>
+          <Items><Link to="/">Accueil</Link></Items>
           <Items><Link to="about">Qui suis-je</Link></Items>
           <Items><Link to="about">Boutique</Link></Items>
         </List>
