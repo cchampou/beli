@@ -56,7 +56,7 @@ export default () => {
         <List>
           <Items>Blog</Items>
           <Items>Contact</Items>
-          <Items>Youtube</Items>
+          <Items><Link to="youtube">Youtube</Link></Items>
         </List>
       </Container>
     </>

@@ -25,5 +25,6 @@ export const Heading3 = styled.h3`
 export const Paragraph = styled.p`
   font-size: 1rem;
   color: ${({ theme }) => theme.colors.primary};
+  text-align: ${({ center }) => center && 'center'};
   font-family: 'Open Sans', sans-serif;
 `;
