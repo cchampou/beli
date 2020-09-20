@@ -1,6 +1,7 @@
 {
   "name": "Belinda sans tabous",
   "short_name": "Belinda",
+  "background_color": "#FFFFFF",
   "start_url": "/",
   "display": "standalone",
   "icons": [{
