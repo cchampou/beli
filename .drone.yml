@@ -8,8 +8,12 @@ steps:
     commands:
       - yarn
       - yarn lint
+    depends_on:
+      - clone
   - name: build
     image: node:14-alpine
     commands:
       - yarn
       - yarn build
+    depends_on:
+      - clone
