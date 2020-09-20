@@ -27,7 +27,8 @@
     "serve": "^11.3.2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "workbox-webpack-plugin": "^5.1.4"
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
