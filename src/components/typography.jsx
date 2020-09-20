@@ -3,18 +3,20 @@ import { css } from '@emotion/core';
 import importedTheme from '../../config/theme.json';
 
 const common = css`
-  color: ${importedTheme.colors.secondary};
+  color: ${importedTheme.colors.primary};
   font-family: 'Playfair Display', serif;
 `;
 
 export const Heading1 = styled.h1`
   ${common};
   font-size: 2rem;
+  font-weight: 100;
 `;
 
 export const Heading2 = styled.h2`
   ${common};
   font-size: 1.75rem;
+  font-weight: 100;
 `;
 
 export const Heading3 = styled.h3`

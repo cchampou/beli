@@ -50,12 +50,12 @@ export default () => {
         <List>
           <Items><Link to="/">Accueil</Link></Items>
           <Items><Link to="about">Qui suis-je</Link></Items>
-          <Items><Link to="about">Boutique</Link></Items>
+          <Items><Link to="shop">Boutique</Link></Items>
         </List>
         <Logo height="10rem" />
         <List>
-          <Items>Blog</Items>
-          <Items>Contact</Items>
+          <Items><Link to="blog">Blog</Link></Items>
+          <Items><Link to="contact">Contact</Link></Items>
           <Items><Link to="youtube">Youtube</Link></Items>
         </List>
       </Container>

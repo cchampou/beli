@@ -1,8 +1,10 @@
 {
   "colors": {
     "primary": "#994444",
-    "secondary": "#555",
+    "secondary": "#f08eb2",
     "tertiary": "#c4beb9",
-    "white": "white"
+    "quaternary": "#c4beb9",
+    "white": "white",
+    "light": "#FAFAFA"
   }
 }
