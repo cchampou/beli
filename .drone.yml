@@ -18,8 +18,9 @@ steps:
 #    depends_on:
 #      - clone
   - name: benchmark
-    image: markhobson/node-chrome:latest
+    image: node:14-alpine
     commands:
+      - apk add chromium
       - yarn
       - yarn build
       - yarn lhci
