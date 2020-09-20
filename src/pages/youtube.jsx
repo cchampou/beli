@@ -28,7 +28,7 @@ const Youtube = () => {
         {t('youtube.intro')}
       </Heading3>
       <Columns>
-        <Tile women href="https://www.youtube.com/channel/BelindaSANSTABOUS" target="_blank" rel="noreferrer">
+        <Tile women href="https://www.youtube.com/channel/UCmeyZ6s6mT4AXYrO9v4e30g" target="_blank" rel="noreferrer">
           <Heading2>{t('youtube.women')}</Heading2>
           <Paragraph>{t('youtube.womenDetails')}</Paragraph>
         </Tile>
