@@ -12,6 +12,8 @@ module.exports = {
       preset: 'lighthouse:recommended',
       assertions: {
         'content-width': ['warn', { minScore: 0.9 }],
+        'uses-optimized-images': ['warn', { maxLength: 0 }],
+        'uses-responsive-images': ['warn', { maxLength: 0 }],
       },
     },
     upload: {
