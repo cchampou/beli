@@ -10,6 +10,7 @@ import About from './pages/about';
 import theme from '../config/theme.json';
 import Header from './components/header';
 import Footer from './components/footer';
+import Youtube from './pages/youtube';
 
 // eslint-disable-next-line import/prefer-default-export
 export const GlobalStyles = css`
@@ -35,6 +36,7 @@ const App = () => (
     <Router>
       <Home path="/" />
       <About path="about" />
+      <Youtube path="youtube" />
     </Router>
     <Footer />
   </ThemeProvider>
