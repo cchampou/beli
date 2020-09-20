@@ -13,4 +13,11 @@ module.exports = {
       skipWaiting: true,
     }),
   ],
+  optimization: {
+    runtimeChunk: true,
+    splitChunks: {
+      chunks: 'all',
+    },
+    minimize: true,
+  },
 };
