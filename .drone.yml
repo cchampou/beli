@@ -17,3 +17,11 @@ steps:
       - yarn build
     depends_on:
       - clone
+  - name: benchmark
+    image: node:14-alpine
+    commands:
+      - yarn
+      - yarn build
+      - yarn lhci
+    depends_on:
+      - clone
