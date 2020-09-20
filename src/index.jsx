@@ -10,6 +10,8 @@ import Header from './components/header';
 import Footer from './components/footer';
 import SocialBar from './components/socialBar';
 
+const Admin = React.lazy(() => import('./pages/admin'));
+const Blog = React.lazy(() => import('./pages/blog'));
 const Home = React.lazy(() => import('./pages/home'));
 const About = React.lazy(() => import('./pages/about'));
 const Youtube = React.lazy(() => import('./pages/youtube'));
@@ -23,6 +25,10 @@ export const GlobalStyles = css`
     margin: 0;
     line-height: 2rem;
   }
+  #root {
+    min-height: 100vh;
+    position: relative;
+  }
   strong {
     font-weight: 800;  
   }
@@ -32,21 +38,29 @@ export const GlobalStyles = css`
   }
 `;
 
-const App = () => (
+const PublicApp = () => (
   <ThemeProvider theme={theme}>
     <Global styles={GlobalStyles} />
     <Header />
-    <Suspense fallback={null}>
-      <Router>
-        <Home path="/" />
-        <About path="about" />
-        <Youtube path="youtube" />
-        <Contact path="contact" />
-      </Router>
-    </Suspense>
+    <Router>
+      <Home path="/" />
+      <About path="about" />
+      <Youtube path="youtube" />
+      <Contact path="contact" />
+      <Blog path="blog" />
+    </Router>
     <SocialBar />
     <Footer />
   </ThemeProvider>
+);
+
+const App = () => (
+  <Suspense fallback={null}>
+    <Router>
+      <Admin path="admin" />
+      <PublicApp path="/*" />
+    </Router>
+  </Suspense>
 );
 
 reactDom.render(<App />, document.getElementById('root'));

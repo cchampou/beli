@@ -27,6 +27,7 @@ module.exports = {
         { from: 'public/favicon.ico' },
         { from: 'public/robots.txt' },
         { from: 'public/manifest.json' },
+        { from: 'public/config.yml' },
         { from: 'public/40.png' },
         { from: 'public/60.png' },
         { from: 'public/120.png' },
