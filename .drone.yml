@@ -18,7 +18,7 @@ steps:
     depends_on:
       - clone
   - name: benchmark
-    image: node:14-alpine
+    image: markhobson/node-chrome:latest
     commands:
       - yarn
       - yarn build
