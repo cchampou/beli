@@ -8,3 +8,8 @@ steps:
     commands:
       - yarn
       - yarn lint
+  - name: build
+    image: node:14-alpine
+    commands:
+      - yarn
+      - yarn build
