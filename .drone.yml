@@ -22,6 +22,7 @@ steps:
     environment:
       LHCI_GITHUB_APP_TOKEN:
         from_secret: LHCI_GITHUB_APP_TOKEN
+      LHCI_BUILD_CONTEXT__GIT_REMOTE: git@github.com:cchampou/beli.git
     commands:
       - apk add chromium
       - yarn
