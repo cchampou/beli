@@ -27,6 +27,7 @@ const UnderTitle = styled(Heading1)`
 
 const Img = styled('img')`
   box-shadow: 0 0 10px lightgray;
+  margin: 1rem;
 `;
 
 const FirstWrapper = styled('div')`
@@ -47,7 +48,7 @@ export default () => {
           <FirstWrapper>
             <Title>Belinda</Title>
             <UnderTitle>Sans Tabous</UnderTitle>
-            <Img src={beli} alt="Belinda" style={{ margin: 'auto' }} width="500" height="334" />
+            <Img src={beli} alt="Belinda" width="500" height="334" />
             <Quote author="Alfred de Musset">
               {t('home.quote')}
             </Quote>
