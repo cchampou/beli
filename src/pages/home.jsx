@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Trans, useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeartbeat } from '@fortawesome/free-solid-svg-icons';
 import { Heading1, Heading2, Paragraph } from '../components/typography';
 import beli from '../assets/Beli.jpg';
 import piano from '../assets/piano.jpg';
 import Quote from '../components/quote';
 import { Columns, Items } from '../utils/flex';
+import { Button } from '../components/forms';
+import { fromLeft } from '../animations/basics';
 
 export const Wrapper = styled('div')`
   width: 80%;
@@ -28,6 +32,7 @@ const UnderTitle = styled(Heading1)`
 const Img = styled('img')`
   box-shadow: 0 0 10px lightgray;
   margin: 1rem;
+  animation: ${fromLeft} 1s;
 `;
 
 const FirstWrapper = styled('div')`
@@ -35,7 +40,13 @@ const FirstWrapper = styled('div')`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-style: italic;
+`;
+
+const CustomButton = styled(Button)`
+  width: auto;
+  margin: auto;
+  display: block;
+  margin: 3rem auto;
 `;
 
 export default () => {
@@ -61,6 +72,11 @@ export default () => {
           <FirstWrapper>
             <Paragraph>
               <Trans t={t} i18nKey="home.captionText" />
+              <CustomButton type="button">
+                <Trans t={t} i18nKey="home.cta" />
+                &nbsp;&nbsp;
+                <FontAwesomeIcon icon={faHeartbeat} />
+              </CustomButton>
             </Paragraph>
           </FirstWrapper>
           <Heading2>

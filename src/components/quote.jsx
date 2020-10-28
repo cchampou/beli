@@ -13,10 +13,9 @@ const quoteStyle = css`
 `;
 
 const Content = styled(Paragraph)`
+  position: relative;
   margin: 4rem 1rem;
-  padding: 2rem 3rem;
-  border-radius: 10px;
-  box-shadow: 0 0 5px #EEEEEE;
+  padding: 3rem 2rem;
   &:before {
     ${quoteStyle}  
   }
@@ -26,18 +25,27 @@ const Content = styled(Paragraph)`
   }
 `;
 
-const Quote = ({ children }) => (
+const Author = styled('p')`
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+`;
+
+const Quote = ({ children, author }) => (
   <Content>
     {children}
+    <Author>{author}</Author>
   </Content>
 );
 
 Quote.defaultProps = {
   children: null,
+  author: null,
 };
 
 Quote.propTypes = {
   children: PropTypes.node,
+  author: PropTypes.string,
 };
 
 export default Quote;

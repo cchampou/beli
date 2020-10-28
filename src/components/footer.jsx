@@ -6,7 +6,6 @@ const Wrapper = styled('div')`
   position: absolute;
   background-color: ${color('light')};
   color: ${color('primary')};
-  margin: 0;
   padding: 1rem;
   text-align: center;
   bottom: 0;

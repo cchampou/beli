@@ -14,6 +14,7 @@ const Container = styled.div`
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 10;
   background-color: white;
   ${({ scrolled }) => scrolled && 'box-shadow: 0 0 7px silver'};
   transition: box-shadow 0.25s ease-in-out;
