@@ -10,4 +10,5 @@ services:
     labels:
       - traefik.http.routers.beli.rule=Host(`beli.cchampou.me`)
       - traefik.http.routers.beli.tls=true
+      - traefik.http.routers.beli.port=9000
       - traefik.http.routers.beli.tls.certresolver=main
