@@ -5,8 +5,6 @@ services:
     image: beli:latest
     ports:
     - 9000:80
-    volumes:
-    - ./config/default.conf.template:/etc/nginx/templates/default.conf.template
     labels:
       - traefik.http.routers.beli.rule=Host(`beli.cchampou.me`)
       - traefik.http.routers.beli.tls=true
