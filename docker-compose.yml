@@ -4,7 +4,7 @@ services:
     build: .
     image: beli:latest
     ports:
-    - 8080:80
+    - 9000:80
     volumes:
     - ./config/default.conf.template:/etc/nginx/templates/default.conf.template
     labels:
