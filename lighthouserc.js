@@ -15,6 +15,7 @@ module.exports = {
         'uses-optimized-images': 'warn',
         'uses-responsive-images': 'warn',
         'unused-javascript': 'warn',
+        'color-contrast': 'warn',
       },
     },
     upload: {

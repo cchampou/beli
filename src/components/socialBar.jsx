@@ -3,14 +3,21 @@ import styled from '@emotion/styled';
 import {
   faFacebook, faInstagram, faTwitter, faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
+
+import { breakpoints } from '../../config/theme.json';
+
 import SocialIcon from './socialIcon';
 
 const Wrapper = styled('div')`
   position: fixed;
   bottom: 100px;
   right: 50px;
-  display: flex;
   flex-direction: column;
+  display: flex;
+  
+  @media (max-width: ${breakpoints.mobile}) {
+    display: none;
+  }
 `;
 
 const SocialBar = () => (

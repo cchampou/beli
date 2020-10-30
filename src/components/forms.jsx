@@ -29,4 +29,5 @@ export const Button = styled('button')`
   color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   width: auto;
+  font-weight: bold;
 `;

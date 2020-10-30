@@ -6,6 +6,7 @@ import { faHeartbeat } from '@fortawesome/free-solid-svg-icons';
 import { Link } from '@reach/router';
 
 import { shop } from '../../config/routes.json';
+import { breakpoints } from '../../config/theme.json';
 
 import { Heading1, Heading2, Paragraph } from '../components/typography';
 import beli from '../assets/Beli.jpg';
@@ -44,6 +45,10 @@ const FirstWrapper = styled('div')`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
+  @media (max-width: ${breakpoints.mobile}) {
+    height: calc(100vh - 7rem);
+  }
 `;
 
 const CustomButton = styled(Button)`
@@ -64,13 +69,19 @@ const PianoBackground = styled('div')`
   z-index: -1;
 `;
 
+const NoMobileItem = styled(Items)`
+  @media (max-width: ${breakpoints.mobile}) {
+    display: none;
+  }
+`;
+
 export default () => {
   const { t } = useTranslation();
 
   return (
     <Wrapper>
       <Rows>
-        <Items>
+        <NoMobileItem>
           <FirstWrapper>
             <Title>Belinda</Title>
             <UnderTitle>Sans Tabous</UnderTitle>
@@ -80,7 +91,7 @@ export default () => {
             </Quote>
           </FirstWrapper>
           <PianoBackground />
-        </Items>
+        </NoMobileItem>
         <Items>
           <FirstWrapper>
             <Paragraph>

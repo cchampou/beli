@@ -1,7 +1,16 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { Link } from '@reach/router';
+
+import { breakpoints } from '../../config/theme.json';
+
 import Logo from './logo';
+
+const Header = styled('div')`
+  @media (max-width: ${breakpoints.mobile}) {
+    display: none;
+  }
+`;
 
 const Padder = styled('div')`
   height: 10rem;
@@ -45,7 +54,7 @@ export default () => {
   });
 
   return (
-    <>
+    <Header>
       <Padder />
       <Container scrolled={scrolled}>
         <List>
@@ -53,13 +62,15 @@ export default () => {
           <Items><Link to="about">Qui suis-je</Link></Items>
           <Items><Link to="shop">Boutique</Link></Items>
         </List>
-        <Logo height="150" width="213" />
+        <Link to="/">
+          <Logo height="150" width="213" />
+        </Link>
         <List>
           <Items><Link to="blog">Blog</Link></Items>
           <Items><Link to="contact">Contact</Link></Items>
           <Items><Link to="youtube">Youtube</Link></Items>
         </List>
       </Container>
-    </>
+    </Header>
   );
 };
