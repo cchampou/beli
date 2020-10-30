@@ -3,27 +3,27 @@ type: docker
 name: default
 
 steps:
-  - name: eslint check
-    image: node:14-alpine
-    commands:
-      - yarn
-      - yarn lint
-  - name: build
-    image: node:14-alpine
-    commands:
-      - yarn
-      - yarn build
-  - name: benchmark
-    image: node:14-alpine
-    environment:
-      LHCI_GITHUB_APP_TOKEN:
-        from_secret: LHCI_GITHUB_APP_TOKEN
-      LHCI_BUILD_CONTEXT__GIT_REMOTE: git@github.com:cchampou/beli.git
-    commands:
-      - apk add chromium
-      - yarn
-      - yarn build
-      - yarn lhci
+#  - name: eslint check
+#    image: node:14-alpine
+#    commands:
+#      - yarn
+#      - yarn lint
+#  - name: build
+#    image: node:14-alpine
+#    commands:
+#      - yarn
+#      - yarn build
+#  - name: benchmark
+#    image: node:14-alpine
+#    environment:
+#      LHCI_GITHUB_APP_TOKEN:
+#        from_secret: LHCI_GITHUB_APP_TOKEN
+#      LHCI_BUILD_CONTEXT__GIT_REMOTE: git@github.com:cchampou/beli.git
+#    commands:
+#      - apk add chromium
+#      - yarn
+#      - yarn build
+#      - yarn lhci
   - name: deploy
     image: docker/compose:1.24.1
     commands:
@@ -31,11 +31,6 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
-    when:
-      event:
-        - promote
-      target:
-        - production
 
 volumes:
   - name: docker
