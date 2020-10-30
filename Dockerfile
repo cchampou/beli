@@ -1,5 +1,7 @@
 FROM nginx:alpine
 
+EXPOSE 9000
+
 RUN apk add --update nodejs yarn
 
 RUN mkdir app
