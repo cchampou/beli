@@ -9,6 +9,7 @@ const common = css`
 
 export const Heading1 = styled.h1`
   ${common};
+  text-align: ${({ center }) => (center ? 'center' : 'inherit')};
   font-size: 2rem;
   font-weight: 100;
 `;
