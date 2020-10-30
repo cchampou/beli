@@ -6,5 +6,8 @@
     "quaternary": "#c4beb9",
     "white": "white",
     "light": "#FAFAFA"
+  },
+  "breakpoints": {
+    "mobile": "1000px"
   }
 }

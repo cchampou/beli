@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+
+import { breakpoints } from '../../config/theme.json';
+
 import { color } from '../utils/styles';
 
 const Wrapper = styled('div')`
@@ -12,11 +15,22 @@ const Wrapper = styled('div')`
   width: calc(100% - 2rem);
 `;
 
+const Pad = styled('div')`
+  width: 100%;
+  height: 4rem;
+  
+  @media (max-width: ${breakpoints.mobile}) {
+    height: 8rem;
+  }
+`;
 const Footer = () => (
-  <Wrapper>
-    Belinda SANS TABOUS - Tous droits réservés I Copyright © 2020
-    I Lire les Conditions Générales de Vente
-  </Wrapper>
+  <>
+    <Pad />
+    <Wrapper>
+      Belinda SANS TABOUS - Tous droits réservés I Copyright © 2020
+      I Lire les Conditions Générales de Vente
+    </Wrapper>
+  </>
 );
 
 export default Footer;

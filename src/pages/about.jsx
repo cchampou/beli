@@ -1,6 +1,9 @@
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import styled from '@emotion/styled';
+
+import { breakpoints } from '../../config/theme.json';
+
 import { Heading2, Paragraph } from '../components/typography';
 import { Wrapper } from './home';
 import miroir from '../assets/miroir.jpg';
@@ -9,6 +12,19 @@ import { zoom } from '../animations/basics';
 
 const Img = styled('img')`
   animation: ${zoom} 0.45s;
+  @media (max-width: ${breakpoints.mobile}) {
+    height: 25vh;
+  }
+`;
+
+const CustomFlexContainer = styled('div')`
+  display: flex;
+  flex-direction: row;
+  
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const About = () => {
@@ -16,7 +32,7 @@ const About = () => {
 
   return (
     <Wrapper>
-      <Rows>
+      <CustomFlexContainer>
         <Items>
           <Img src={miroir} alt="Belinda devant un miroir" />
         </Items>
@@ -26,7 +42,7 @@ const About = () => {
             <Trans i18nKey="about.firstParagraph" />
           </Paragraph>
         </Items>
-      </Rows>
+      </CustomFlexContainer>
       <Rows>
         <Items>
           <Paragraph>

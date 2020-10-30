@@ -52,7 +52,7 @@
   },
   "scripts": {
     "lint": "eslint --ext jsx --ext js src",
-    "dev": "webpack-dev-server --config webpack.development.config.js --open",
+    "dev": "webpack-dev-server --config webpack.development.config.js --open --host 0.0.0.0",
     "build": "webpack --config webpack.config.js",
     "analyze": "NODE_ENV=detective webpack --config webpack.config.js",
     "serve": "serve -s dist",
