@@ -17,6 +17,7 @@ const Store = () => {
 
   return (
     <WrappedRows>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       {entries.map((entry) => <ShopCategory key={entry.id} {...entry} />)}
     </WrappedRows>
   );
