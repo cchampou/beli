@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
-import { Rows } from '../utils/flex';
+import { WrappedRows } from '../utils/flex';
 import ShopCategory from '../components/shopCategory';
+import fetchFromApi from '../utils/fetch';
 
-const WrappedRows = styled(Rows)`
-  flex-wrap: wrap;
-  width: 80%;
-  margin: auto;
-`;
-
-const Store = () => {
+const Shop = () => {
   const [entries, setEntries] = useState([]);
   useEffect(() => {
-    fetch('https://api.beli.cchampou.me/shop-categories').then((res) => res.json()).then((data) => setEntries(data));
+    fetchFromApi('shop-categories').then((data) => setEntries(data));
   }, []);
 
   return (
@@ -23,4 +17,4 @@ const Store = () => {
   );
 };
 
-export default Store;
+export default Shop;

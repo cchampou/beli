@@ -14,3 +14,10 @@ export const Items = styled('div')`
   flex: 1;
   padding: 3rem;
 `;
+
+export const WrappedRows = styled(Rows)`
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+`;

@@ -11,12 +11,14 @@ import theme from '../config/theme.json';
 import Header from './components/header';
 import Footer from './components/footer';
 import SocialBar from './components/socialBar';
+import NotFound from './pages/notFound';
 
 const Home = React.lazy(() => import('./pages/home'));
 const About = React.lazy(() => import('./pages/about'));
 const Youtube = React.lazy(() => import('./pages/youtube'));
 const Contact = React.lazy(() => import('./pages/contact'));
-const Store = React.lazy(() => import('./pages/store'));
+const Shop = React.lazy(() => import('./pages/shop'));
+const ShopEntry = React.lazy(() => import('./pages/shopEntry'));
 
 // eslint-disable-next-line import/prefer-default-export
 export const GlobalStyles = css`
@@ -50,7 +52,9 @@ const App = () => (
         <About path="about" />
         <Youtube path="youtube" />
         <Contact path="contact" />
-        <Store path={shop} />
+        <Shop path={shop} />
+        <ShopEntry path={`${shop}/:slug`} />
+        <NotFound default />
       </Router>
     </Suspense>
     <SocialBar />
