@@ -3,6 +3,7 @@ server {
 
   root /usr/share/nginx/html;
   etag off;
+  gzip on;
 
   location / {
     try_files $uri $uri/ /index.html;
