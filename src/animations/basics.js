@@ -12,6 +12,16 @@ export const zoom = keyframes`
   }
 `;
 
+export const zoomHover = keyframes`
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+`;
+
 export const fromLeft = keyframes`
   from {
     transform: translateX(-50%);

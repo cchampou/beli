@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { Heading2, Paragraph } from '../components/typography';
 import { Wrapper } from './home';
 import miroir from '../assets/miroir.jpg';
-import { Columns, Items } from '../utils/flex';
+import { Items, Rows } from '../utils/flex';
 import { zoom } from '../animations/basics';
 
 const Img = styled('img')`
@@ -16,7 +16,7 @@ const About = () => {
 
   return (
     <Wrapper>
-      <Columns>
+      <Rows>
         <Items>
           <Img src={miroir} alt="Belinda devant un miroir" />
         </Items>
@@ -26,7 +26,14 @@ const About = () => {
             <Trans i18nKey="about.firstParagraph" />
           </Paragraph>
         </Items>
-      </Columns>
+      </Rows>
+      <Rows>
+        <Items>
+          <Paragraph>
+            <Trans i18nKey="about.secondParagraph" />
+          </Paragraph>
+        </Items>
+      </Rows>
     </Wrapper>
   );
 };

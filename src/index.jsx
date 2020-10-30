@@ -4,6 +4,8 @@ import './utils/i18n';
 import { ThemeProvider } from 'emotion-theming';
 import { Global, css } from '@emotion/core';
 import { Router } from '@reach/router';
+import styled from '@emotion/styled';
+import { shop } from '../config/routes.json';
 
 import theme from '../config/theme.json';
 import Header from './components/header';
@@ -14,6 +16,7 @@ const Home = React.lazy(() => import('./pages/home'));
 const About = React.lazy(() => import('./pages/about'));
 const Youtube = React.lazy(() => import('./pages/youtube'));
 const Contact = React.lazy(() => import('./pages/contact'));
+const Store = React.lazy(() => import('./pages/store'));
 
 // eslint-disable-next-line import/prefer-default-export
 export const GlobalStyles = css`
@@ -32,6 +35,11 @@ export const GlobalStyles = css`
   }
 `;
 
+const Pad = styled('div')`
+  width: 100%;
+  height: 4rem;
+`;
+
 const App = () => (
   <ThemeProvider theme={theme}>
     <Global styles={GlobalStyles} />
@@ -42,9 +50,11 @@ const App = () => (
         <About path="about" />
         <Youtube path="youtube" />
         <Contact path="contact" />
+        <Store path={shop} />
       </Router>
     </Suspense>
     <SocialBar />
+    <Pad />
     <Footer />
   </ThemeProvider>
 );

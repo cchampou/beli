@@ -3,11 +3,15 @@ import styled from '@emotion/styled';
 import { Trans, useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeartbeat } from '@fortawesome/free-solid-svg-icons';
+import { Link } from '@reach/router';
+
+import { shop } from '../../config/routes.json';
+
 import { Heading1, Heading2, Paragraph } from '../components/typography';
 import beli from '../assets/Beli.jpg';
 import piano from '../assets/piano.jpg';
 import Quote from '../components/quote';
-import { Columns, Items } from '../utils/flex';
+import { Items, Rows } from '../utils/flex';
 import { Button } from '../components/forms';
 import { fromLeft } from '../animations/basics';
 
@@ -49,12 +53,23 @@ const CustomButton = styled(Button)`
   margin: 3rem auto;
 `;
 
+const PianoBackground = styled('div')`
+  background-image:     linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1) 50%), url('${piano}');
+  background-size: cover;
+  width: 60vw;
+  left: 0;
+  height: 50rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+`;
+
 export default () => {
   const { t } = useTranslation();
 
   return (
     <Wrapper>
-      <Columns>
+      <Rows>
         <Items>
           <FirstWrapper>
             <Title>Belinda</Title>
@@ -64,19 +79,19 @@ export default () => {
               {t('home.quote')}
             </Quote>
           </FirstWrapper>
-          <Paragraph center>
-            <img src={piano} alt="Piano" width="500" height="333" />
-          </Paragraph>
+          <PianoBackground />
         </Items>
         <Items>
           <FirstWrapper>
             <Paragraph>
               <Trans t={t} i18nKey="home.captionText" />
-              <CustomButton type="button">
-                <Trans t={t} i18nKey="home.cta" />
+              <Link to={shop}>
+                <CustomButton type="button">
+                  <Trans t={t} i18nKey="home.cta" />
                 &nbsp;&nbsp;
-                <FontAwesomeIcon icon={faHeartbeat} />
-              </CustomButton>
+                  <FontAwesomeIcon icon={faHeartbeat} />
+                </CustomButton>
+              </Link>
             </Paragraph>
           </FirstWrapper>
           <Heading2>
@@ -85,6 +100,10 @@ export default () => {
           <Paragraph>
             <Trans i18nKey="home.firstParagraph" />
           </Paragraph>
+        </Items>
+      </Rows>
+      <Rows>
+        <Items>
           <Heading2>{t('home.secondTitle')}</Heading2>
           <Paragraph>
             <Trans i18nKey="home.secondParagraph" />
@@ -106,7 +125,7 @@ export default () => {
             <Trans i18nKey="home.sixthParagraph" />
           </Paragraph>
         </Items>
-      </Columns>
+      </Rows>
     </Wrapper>
   );
 };

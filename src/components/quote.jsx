@@ -25,7 +25,7 @@ const Content = styled(Paragraph)`
   }
 `;
 
-const Author = styled('p')`
+const Author = styled('span')`
   position: absolute;
   right: 20px;
   bottom: 10px;
