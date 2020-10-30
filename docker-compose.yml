@@ -12,3 +12,8 @@ services:
       - traefik.http.routers.beli.tls=true
       - traefik.http.services.beli.loadbalancer.server.port=9000
       - traefik.http.routers.beli.tls.certresolver=main
+
+networks:
+  default:
+    external:
+      name: allixo_default
