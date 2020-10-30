@@ -8,7 +8,7 @@ services:
     volumes:
     - ./config/default.conf.template:/etc/nginx/templates/default.conf.template
     labels:
-      - traefik.http.routers.web.rule=Host(`beli.cchampou.me`)
-      - traefik.http.routers.web.tls=true
-      - traefik.http.services.web.loadbalancer.server.port=9000
-      - traefik.http.routers.web.tls.certresolver=main
+      - traefik.http.routers.web-beli.rule=Host(`beli.cchampou.me`)
+      - traefik.http.routers.web-beli.tls=true
+      - traefik.http.services.web-beli.loadbalancer.server.port=9000
+      - traefik.http.routers.web-beli.tls.certresolver=main
