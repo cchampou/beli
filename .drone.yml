@@ -36,3 +36,8 @@ steps:
 #        - promote
 #      target:
 #        - production
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
