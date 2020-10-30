@@ -24,3 +24,12 @@ steps:
       - yarn
       - yarn build
       - yarn lhci
+  - name: deploy
+    image: docker/compose:1.24.1
+    commands:
+      - docker-compose -p beli up
+    when:
+      event:
+        - promote
+      target:
+        - production

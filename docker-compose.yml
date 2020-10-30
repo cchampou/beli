@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  web:
+    build: .
+    image: beli:latest
+    ports:
+    - 80:80
+    volumes:
+    - ./config/default.conf.template:/etc/nginx/templates/default.conf.template
+    labels:
+      - traefik.http.routers.beli.rule=Host(`beli.cchampou.me`)
+      - traefik.http.routers.beli.tls=true
+      - traefik.http.routers.beli.tls.certresolver=main
