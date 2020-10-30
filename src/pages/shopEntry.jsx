@@ -27,6 +27,7 @@ const ShopEntryPage = ({ slug }) => {
     <>
       <Heading1 center>{category.name}</Heading1>
       <WrappedRows>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         {entries.map((entry) => <ShopEntry key={entry.id} {...entry} />)}
       </WrappedRows>
     </>

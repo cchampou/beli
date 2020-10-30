@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import { Link } from '@reach/router';
 import { Items } from '../utils/flex';
 import { getPreferredSize, getUrlFromFormat } from '../utils/media';
 import { Heading3, Paragraph } from './typography';
