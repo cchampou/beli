@@ -13,6 +13,11 @@ const Wrapper = styled('div')`
   text-align: center;
   bottom: 0;
   width: calc(100% - 2rem);
+  @media (max-width: ${breakpoints.mobile}) {
+    line-height: 1.1rem;
+    font-size: 0.9rem;
+    padding: 0.9rem;
+  }
 `;
 
 const Pad = styled('div')`
@@ -20,7 +25,7 @@ const Pad = styled('div')`
   height: 4rem;
   
   @media (max-width: ${breakpoints.mobile}) {
-    height: 8rem;
+    height: 6rem;
   }
 `;
 const Footer = () => (
