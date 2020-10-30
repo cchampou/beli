@@ -18,5 +18,3 @@ RUN yarn build
 RUN rm -rf /usr/share/nginx/html
 
 RUN mv dist /usr/share/nginx/html
-
-COPY config/default.conf.template /etc/nginx/nginx.d/default.conf
