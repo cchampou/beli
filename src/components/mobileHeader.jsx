@@ -13,7 +13,7 @@ const Header = styled('div')`
 `;
 
 const Pad = styled('div')`
-  height: 6rem;
+  height: 7rem;
 `;
 
 const Container = styled.div`
