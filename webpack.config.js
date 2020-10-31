@@ -1,5 +1,6 @@
 const path = require('path');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
 const commonConfig = require('./webpack.common.config');
 
 module.exports = {
@@ -12,6 +13,10 @@ module.exports = {
       clientsClaim: true,
       skipWaiting: true,
     }),
+    new SitemapPlugin('https://beli.cchampou.me', [
+      '/',
+      '/contact',
+    ]),
   ],
   optimization: {
     runtimeChunk: true,
