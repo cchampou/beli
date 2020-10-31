@@ -16,8 +16,9 @@ module.exports = {
     new SitemapPlugin('https://beli.cchampou.me', [
       '/',
       '/about',
-      '/contact',
       '/shop',
+      '/blog',
+      '/contact',
       '/youtube',
     ]),
   ],
