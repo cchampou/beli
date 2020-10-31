@@ -24,3 +24,20 @@ steps:
       - yarn
       - yarn build
       - yarn lhci
+  - name: deploy
+    image: docker/compose:1.24.1
+    commands:
+      - docker-compose -p beli up -d --build web
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+    when:
+      event:
+        - promote
+      target:
+        - production
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock

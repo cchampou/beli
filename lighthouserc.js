@@ -16,6 +16,7 @@ module.exports = {
         'uses-responsive-images': 'warn',
         'unused-javascript': 'warn',
         'color-contrast': 'warn',
+        'is-crawlable': 'warn',
       },
     },
     upload: {

@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  web:
+    build: .
+    image: beli:latest
+    ports:
+    - 9000:80
+    labels:
+      - traefik.http.routers.beli.rule=Host(`beli.cchampou.me`)
+      - traefik.http.routers.beli.tls=true
+      - traefik.http.routers.beli.tls.certresolver=main
+
+networks:
+  default:
+    external:
+      name: allixo_default

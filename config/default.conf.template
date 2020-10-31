@@ -1,0 +1,18 @@
+
+server {
+
+  root /usr/share/nginx/html;
+
+
+  etag off;
+  gzip on;
+  gzip_types text/plain application/xml application/javascript;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+
+  location /blog {
+    proxy_pass  https://www.belinda-sanstabous.com/blog;
+  }
+}
