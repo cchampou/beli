@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /
+Allow: /sitemap.xml
 
 Sitemap: https://beli.cchampou.me/sitemap.xml
