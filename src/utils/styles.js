@@ -4,7 +4,7 @@ export const color = (name) => ({ theme }) => theme.colors[name];
 
 export const scaleOnHover = css`
   transition: all 0.25s;
-  opacity: 0.8;
+  opacity: 0.9;
   
   &:hover {
     opacity: 1;

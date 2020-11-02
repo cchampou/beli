@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import importedTheme from '../../config/theme.json';
 
 const common = css`
-  color: ${importedTheme.colors.primary};
-  font-family: 'Playfair Display', serif;
+  color: black;
+  font-family: 'Avenir', 'Playfair Display', serif;
 `;
 
 export const Heading1 = styled.h1`
