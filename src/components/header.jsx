@@ -32,6 +32,7 @@ const Container = styled.div`
 const List = styled.ul`
   list-style: none;
   display: flex;
+  margin-bottom: 2rem;
 `;
 
 const Items = styled.li`

@@ -6,7 +6,7 @@ import { faHeartbeat } from '@fortawesome/free-solid-svg-icons';
 import { Link } from '@reach/router';
 
 import { shop } from '../../config/routes.json';
-import { breakpoints } from '../../config/theme.json';
+import { breakpoints, colors } from '../../config/theme.json';
 
 import { Heading1, Heading2, Paragraph } from '../components/typography';
 import beli from '../assets/Beli.jpg';
@@ -25,6 +25,7 @@ const Title = styled(Heading1)`
   margin: 0 0;
   font-style: normal;
   font-size: 3rem;
+  color: ${colors.primary};
 `;
 
 const UnderTitle = styled(Heading1)`

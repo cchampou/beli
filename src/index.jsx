@@ -19,16 +19,20 @@ const Youtube = React.lazy(() => import('./pages/youtube'));
 const Contact = React.lazy(() => import('./pages/contact'));
 const Shop = React.lazy(() => import('./pages/shop'));
 const ShopEntry = React.lazy(() => import('./pages/shopEntry'));
+const Admin = React.lazy(() => import('./pages/admin'));
+const BlogPost = React.lazy(() => import('./pages/blogPost'));
+const Post = React.lazy(() => import('./pages/blog'));
 
 // eslint-disable-next-line import/prefer-default-export
 export const GlobalStyles = css`
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Avenir', sans-serif;
     font-weight: 300;
     margin: 0;
     line-height: 2rem;
     overflow-x: hidden;
     width: 100vw;
+    text-align: justify;
   }
   strong {
     font-weight: 800;  
@@ -36,6 +40,14 @@ export const GlobalStyles = css`
   a {
     text-decoration: none;
     color: inherit;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: black;
+    font-family: 'Avenir', sans-serif;
+    font-smooth: always;
+  }
+  img {
+    display: block; 
   }
 `;
 
@@ -50,6 +62,9 @@ const App = () => (
         <About path="about" />
         <Youtube path="youtube" />
         <Contact path="contact" />
+        <Admin path="admin" />
+        <Post path="blog" />
+        <BlogPost path="blog/:slug" />
         <Shop path={shop} />
         <ShopEntry path={`${shop}/:slug`} />
         <NotFound default />
