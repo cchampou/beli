@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import {
-  categoriesEquivalent, getCategories, getMedia, getPosts,
+  categoriesEquivalent, getMedia, getPosts,
 } from '../migration/wp';
 
 const Admin = () => {
@@ -8,6 +8,7 @@ const Admin = () => {
     getPosts()
       .then((data) => {
         data.map((entry) => {
+          // eslint-disable-next-line camelcase
           getMedia(entry.featured_media).then(({ source_url }) => {
             fetch('https://api.beli.cchampou.me/posts/', {
               method: 'post',
@@ -24,6 +25,7 @@ const Admin = () => {
               }),
             });
           });
+          return null;
         });
       });
   }, []);
